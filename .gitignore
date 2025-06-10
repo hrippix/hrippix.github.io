@@ -15,3 +15,5 @@ _posts
 .obsidian
 package.json
 package-lock.json
+_obsidian_posts/*
+preprocess.py

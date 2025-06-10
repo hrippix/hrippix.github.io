@@ -1,14 +1,17 @@
 blockquote {
-    // display: flex;
-  background-color: var(--md-sys-color-tertiary-container);
-  color: var(--md-sys-color-on-tertiary-container);
-//   border: 1px solid var(--md-sys-color-on-tertiary-container);
-  border-left: 6px solid var(--md-sys-color-on-tertiary-container);
+  // display: flex;
+  background-color: var(--md-sys-color-surface-container-highest);
+  color: var(--md-sys-color-on-surface);
+  // border-color: var(--md-sys-color-on-surface);
+  //   border: 1px solid var(--md-sys-color-on-tertiary-container);
+  // border-left: 6px solid var(--md-sys-color-on-tertiary-container);
   padding: $spacing-unit;
   margin-left: 10px;
   margin-right: 10px;
-  border-radius: 6px;
-  svg{
+  margin-top: 18px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  svg {
     margin-right: 4px;
     flex-shrink: 0;
     float: left;
@@ -17,12 +20,44 @@ blockquote {
   > :last-child {
     margin-bottom: 0;
   }
+
   > p {
     text-align: left;
+    &:first-of-type {
+      font-weight: bold;
+      // &::before {
+      //   display: none;
+      //   content: "";
+      //   width: 1.2em;
+      //   height: 1.2em;
+      //   background-repeat: no-repeat;
+      //   background-position: center;
+      //   vertical-align: middle;
+      //   margin-right: 0.5em;
+      //   stroke: currentColor;
+      // }
+    }
   }
   &.warning {
     background-color: var(--md-sys-color-error-container);
     color: var(--md-sys-color-on-error-container);
     border-color: var(--md-sys-color-on-error-container);
+    // > p:first-of-type::before {
+    //   display: inline-block;
+    //   background-image: url("/assets/theme-assets/theme-icons/triangle-alert.svg");
+    // }
+  }
+  &.important,
+  &.idea,
+  &.tip,
+  &.remember {
+    background-color: var(--md-sys-color-tertiary-container);
+    color: var(--md-sys-color-on-tertiary-container);
+    border-color: var(--md-sys-color-on-tertiary-container);
+  }
+  &.quote {
+    background-color: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+    border-color: var(--md-sys-color-on-secondary-container);
   }
 }
